@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ML_Calculator.domlwithv_vignesh">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DoMLWithV_vignesh">
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.kpca"></activity>
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.PCA" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.Randomforest" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.decisiontree" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.chitest" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.ftest" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.ttest" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.ztest" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.fuzzyc" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.densityc" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.hierc" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.kmeans" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.NaiveBayes_int" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.NaiveBayes_str" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.svmk" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.svmL" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.Knearest" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.logistic" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.Multilin" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.polyres" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.linear" />
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.splash_screen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ML_Calculator.domlwithv_vignesh.MainActivity" />
+
+        <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7769675880934302~4080472979"/>
+
+    </application>
+
+</manifest>

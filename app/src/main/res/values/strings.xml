@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">ML</string>
+    <string-array name="ls">
+        <item>Linear Regerssion</item>
+        <item>Multiple Regerssion</item>
+        <item>Logistic Regerssion</item>
+        <item>Polinamial regerssion</item>
+    </string-array>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string-array name="testing_method">
+        <item>normal_validation</item>
+        <item>train_test_split_validation</item>
+        <item>k_fold_cross_validation</item>
+    </string-array>
+
+    <string-array name="sty">
+        <item>y</item>
+        <item>no</item>
+    </string-array>
+
+    <string-array name="dm">
+        <item>euclidean</item>
+        <item>manhattan</item>
+        <item>chebyshev</item>
+        <item>minkowski</item>
+    </string-array>
+
+
+    <string-array name="k_type">
+        <item>linear</item>
+        <item>poly</item>
+        <item>rbf</item>
+        <item>sigmoid</item>
+    </string-array>
+
+    <string-array name="nbs">
+        <item>normal_validation</item>
+        <item>train_test_split_validation</item>
+    </string-array>
+
+    <string-array name="yn">
+        <item>yes</item>
+        <item>no</item>
+    </string-array>
+
+    <string-array name="lk">
+        <item>ward</item>
+        <item>complete</item>
+        <item>average</item>
+        <item>single</item>
+    </string-array>
+
+    <string-array name="ts">
+        <item>Single mean</item>
+        <item>Difference of mean</item>
+        <item>Single proportion</item>
+        <item>Difference of proportion</item>
+    </string-array>
+
+    <string-array name="tlr">
+        <item>Two tail test</item>
+        <item>Left tail test</item>
+        <item>Right tail test</item>
+    </string-array>
+
+    <string-array name="tt">
+        <item>Single mean</item>
+        <item>Difference of mean</item>
+    </string-array>
+
+    <string-array name="ds">
+        <item></item>
+        <item>different population</item>
+        <item>same population(sd1 and sd2 are given)</item>
+        <item>same population(sd calculated manually)</item>
+    </string-array>
+
+    <string-array name="tof">
+        <item>Independence of attributes</item>
+        <item>goodness of fit</item>
+    </string-array>
+
+    <string-array name="db">
+        <item>none</item>
+        <item>normal</item>
+        <item>binomial</item>
+        <item>poisson</item>
+    </string-array>
+
+    <string-array name="ct">
+        <item>gini</item>
+        <item>entropy</item>
+    </string-array>
+
+    <string-array name="sc">
+        <item>accuracy</item>
+        <item>precision</item>
+        <item>recall</item>
+        <item>f1</item>
+    </string-array>
+    <string name="title_activity_pca">PCA</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+</resources>

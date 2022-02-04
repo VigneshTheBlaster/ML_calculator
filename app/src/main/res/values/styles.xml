@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="Widget.Theme.DoMLWithV_vignesh.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
+
+        <item name="android:textSize">30sp</item>
+
+    </style>
+</resources>

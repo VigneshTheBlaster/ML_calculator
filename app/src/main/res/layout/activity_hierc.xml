@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hierc">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:id="@+id/scrollLayou"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2"
+        android:background="@drawable/hacker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:layout_constraintVertical_bias="0.0">
+
+
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="18dp"
+            android:orientation="vertical"
+            android:paddingTop="-10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:layout_marginTop="18dp"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="X's : "
+                    android:textSize="20dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/X1"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:hint="5,8,6,7,8;1,2,9,6,9"
+                    android:autoSizeTextType="uniform"
+                    android:layout_weight="99"
+                    android:textSize="20dp"
+                    android:layout_margin="5dp"
+                    ></com.google.android.material.textfield.TextInputEditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="n_clusters : "
+                    android:textSize="20dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ts"
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_height="42dp"
+                    android:hint="3      "
+                    android:textSize="19dp"
+                    android:autoSizeTextType="uniform"
+                    android:layout_weight="99"
+                    android:layout_marginTop="-6dp"
+                    ></com.google.android.material.textfield.TextInputEditText>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="visualise_the_dendogram : "
+                    android:textSize="17dp"
+                    android:layout_marginLeft="-2dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <Spinner
+                    android:id="@+id/spinne2"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/gadaj_font"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="normalise_data : "
+                    android:textSize="20dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/gadaj_font"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="6dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="distance metric:"
+                    android:textSize="18dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <Spinner
+                    android:id="@+id/spinner6"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/gadaj_font"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="3dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="linkage : "
+                    android:layout_margin="5dp"
+                    android:textSize="20dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <Spinner
+                    android:id="@+id/spinner7"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/gadaj_font"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="visualise_data : "
+                    android:textSize="20dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <Spinner
+                    android:id="@+id/spinner4"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/gadaj_font"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="6dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="predict : "
+                    android:textSize="20dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/p1"
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_height="42dp"
+                    android:textSize="20dp"
+                    android:hint="3,2 or 2,2;4,1"
+                    android:autoSizeTextType="uniform"
+                    android:layout_weight="99"
+                    android:layout_marginTop="-6dp"
+                    ></com.google.android.material.textfield.TextInputEditText>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginTop="18dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <Button
+                        android:id="@+id/button5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:background="@drawable/myradius"
+                        android:fontFamily="@font/gadaj_font"
+                        android:onClick="build1"
+                        android:text="build"
+                        android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:textSize="23dp"
+                        android:typeface="monospace" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="45dp">
+
+                <LinearLayout
+                    android:id="@+id/scrollLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/myradius"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintVertical_bias="0.0">
+                    <TextView
+                        android:id="@+id/pre1"
+                        android:layout_width="match_parent"
+                        android:layout_height="236dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="22dp"
+                        android:layout_marginBottom="15dp"
+                        android:fontFamily="sans-serif"
+                        android:paddingLeft="5dp"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                        android:textColor="#000000"
+                        android:textSize="27dp"
+                        android:typeface="monospace"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/grp1"
+                        android:layout_width="match_parent"
+                        android:layout_height="258dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginTop="-13dp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/grp2"
+                        android:layout_width="match_parent"
+                        android:layout_height="258dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginTop="7dp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-7769675880934302/9311444898"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/gif"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:alpha="0.8"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toEndOf="@+id/guideline10"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/guideline11"
+        app:layout_constraintVertical_bias="0.375" />
+
+    <FrameLayout
+        android:id="@+id/re1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:outlineProvider="background"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline14"
+        app:layout_constraintEnd_toEndOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/guideline13">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp" />
+    </FrameLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.27" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5622435" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.09" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,1525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE androidx.constraintlayout.widget.ConstraintLayout [
+<!ENTITY nbps "&#160;">
+]>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ztest">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:id="@+id/scrollLayou"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2"
+        android:background="@drawable/hacker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="18dp"
+            android:orientation="vertical"
+            android:paddingTop="-10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                >
+
+                <Spinner
+                    android:id="@+id/spinner6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gadaj_font"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="no of samples : "
+                    android:textSize="20dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="number"
+                    android:id="@+id/ns"
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_height="42dp"
+                    android:hint="60      "
+                    android:textSize="19dp"
+                    android:autoSizeTextType="uniform"
+                    android:layout_weight="99"
+                    android:layout_marginTop="-6dp"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="mean of samples : "
+                    android:textSize="20dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/mos"
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_height="42dp"
+                    android:hint="56.2      "
+                    android:textSize="19dp"
+                    android:autoSizeTextType="uniform"
+                    android:layout_weight="99"
+                    android:layout_marginTop="-6dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="population mean : "
+                    android:textSize="20dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/pm"
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_height="42dp"
+                    android:hint="55      "
+                    android:autoSizeTextType="uniform"
+                    android:layout_weight="99"
+                    android:textSize="19dp"
+                    android:layout_marginTop="-6dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="standard deviation : "
+                    android:textSize="18dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/sd"
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_height="42dp"
+                    android:hint="4.2      "
+                    android:autoSizeTextType="uniform"
+                    android:layout_weight="99"
+                    android:textSize="19dp"
+                    android:layout_marginTop="-6dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="level of significance : "
+                    android:textSize="18dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/los"
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_height="42dp"
+                    android:hint="5      "
+                    android:textSize="17dp"
+                    android:autoSizeTextType="uniform"
+                    android:layout_weight="99"
+                    android:layout_marginTop="-6dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Test :"
+                    android:textAllCaps="false"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:typeface="monospace" />
+
+                <Spinner
+                    android:id="@+id/spinner7"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="5dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:paddingBottom="8dp"
+                    android:text="mean of 1st population's \n&#160;&#160;sample :"
+                    android:textSize="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/mfps"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:hint="40      "
+                    android:autoSizeTextType="uniform"
+                    android:textSize="19dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="99"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:paddingBottom="8dp"
+                    android:text="mean of 2nd population's\n&#160;&#160;sample :"
+                    android:textSize="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/msps"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:hint="54.2      "
+                    android:autoSizeTextType="uniform"
+                    android:layout_marginTop="8dp"
+                    android:textSize="19dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="99"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:paddingBottom="8dp"
+                    android:text="mean of 1st population :"
+                    android:textSize="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/mfp"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:autoSizeTextType="uniform"
+                    android:textSize="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="not mandatory"
+                    android:layout_weight="79"
+                    android:layout_margin="5dp"
+                />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:paddingBottom="8dp"
+                    android:text="mean of 2nd population :"
+                    android:textSize="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/msp"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textSize="10dp"
+                    android:hint="not mandatory  "
+                    android:autoSizeTextType="uniform"
+                    android:layout_weight="99"
+                    android:layout_margin="5dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:paddingBottom="8dp"
+                    android:text="no of 1st population's \n&#160;&#160;sample :"
+                    android:textSize="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="number"
+                    android:id="@+id/nfps"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:hint="40      "
+                    android:autoSizeTextType="uniform"
+                    android:layout_marginTop="8dp"
+                    android:textSize="19dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="99"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-6dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:paddingBottom="8dp"
+                    android:text="no of 2nd population's \n&#160;&#160;sample :"
+                    android:textSize="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="number"
+                    android:id="@+id/nsps"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:hint="50      "
+                    android:textSize="19dp"
+                    android:autoSizeTextType="uniform"
+                    android:layout_weight="99"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ly29"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="sd of 1st population :"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                    android:textColor="#000000"
+                    android:textSize="14dp"
+                    android:typeface="monospace"
+                    />
+
+                <EditText
+                    android:id="@+id/sdfp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="12dp"
+                    android:hint="6.3\t\t"
+                    android:layout_marginTop="-3dp"
+                    android:textSize="19dp"
+                    android:inputType="numberDecimal"
+                    android:autoSizeTextType="uniform"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly210"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="sd of 2nd population :"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                    android:textColor="#000000"
+                    android:textSize="14dp"
+                    android:typeface="monospace"
+                    />
+
+                <EditText
+                    android:id="@+id/sdsp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="12dp"
+                    android:hint="6.4\t\t"
+                    android:textSize="19dp"
+                    android:layout_marginTop="-3dp"
+                    android:inputType="numberDecimal"
+                    android:autoSizeTextType="uniform"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly27"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="level of significance : "
+                    android:textSize="18dp"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/los2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="12dp"
+                    android:hint="5\t\t"
+                    android:textSize="19dp"
+                    android:layout_marginTop="-2dp"
+                    android:inputType="numberDecimal"
+                    android:autoSizeTextType="uniform" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Test :"
+                    android:textAllCaps="false"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:typeface="monospace" />
+
+                <Spinner
+                    android:id="@+id/spinner27"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="5dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-3dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:paddingBottom="6dp"
+                    android:text="no of population sample :"
+                    android:textSize="17dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="number"
+                    android:id="@+id/nps"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:hint="100      "
+                    android:layout_marginLeft="-2dp"
+                    android:autoSizeTextType="uniform"
+                    android:layout_marginTop="1dp"
+                    android:textSize="19dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="99"
+                   />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly32"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="sample proportion :"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                    android:textColor="#000000"
+                    android:textSize="17dp"
+                    android:typeface="monospace"
+                    />
+
+                <EditText
+                    android:id="@+id/sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="12dp"
+                    android:hint="0.02\t\t"
+                    android:textSize="19dp"
+                    android:layout_marginTop="-3dp"
+                    android:inputType="numberDecimal"
+                    android:autoSizeTextType="uniform"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly33"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="population proportion :"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                    android:textColor="#000000"
+                    android:textSize="17dp"
+                    android:typeface="monospace"
+                    />
+
+                <EditText
+                    android:id="@+id/pp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="12dp"
+                    android:hint="0.01\t\t"
+                    android:layout_marginTop="-3dp"
+                    android:textSize="19dp"
+                    android:inputType="numberDecimal"
+                    android:autoSizeTextType="uniform"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly35"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="level of significance : "
+                    android:textSize="18dp"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/los3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="12dp"
+                    android:hint="5\t\t"
+                    android:textSize="19dp"
+                    android:layout_marginTop="-2dp"
+                    android:inputType="numberDecimal"
+                    android:autoSizeTextType="uniform" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Test :"
+                    android:textAllCaps="false"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:typeface="monospace" />
+
+                <Spinner
+                    android:id="@+id/spinner37"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="5dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-6dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:paddingBottom="8dp"
+                    android:text="sample proportion of 1st \n&#160;&#160;population :"
+                    android:textSize="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/spsp"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:hint="0.3     "
+                    android:textSize="19dp"
+                    android:autoSizeTextType="uniform"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="99"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-6dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:paddingBottom="8dp"
+                    android:text="sample proportion of 2nd \n&#160;&#160;population :"
+                    android:textSize="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/spfp"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:hint="0.7     "
+                    android:textSize="19dp"
+                    android:autoSizeTextType="uniform"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="99"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:paddingBottom="6dp"
+                    android:text="proportion of 1st \n population :"
+                    android:textSize="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/pfp"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="-20dp"
+                    android:autoSizeTextType="uniform"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="not mandatory"
+                    android:layout_weight="79"
+                    android:layout_margin="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:paddingBottom="6dp"
+                    android:text="proportion of 2nd \npopulation :"
+                    android:textSize="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/psp"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:autoSizeTextType="uniform"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="-20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="not mandatory"
+                    android:layout_weight="79"
+                    android:layout_margin="5dp"
+               />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-6dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:paddingBottom="8dp"
+                    android:text="no of 1st population's \n&#160;&#160;sample :"
+                    android:textSize="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/nfpsp"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:hint="40      "
+                    android:textSize="19dp"
+                    android:autoSizeTextType="uniform"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="99"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-6dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:paddingBottom="8dp"
+                    android:text="no of 2nd population's \n&#160;&#160;sample :"
+                    android:textSize="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="number"
+                    android:id="@+id/nspsp"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textSize="19dp"
+                    android:hint="50      "
+                    android:autoSizeTextType="uniform"
+                    android:layout_weight="99"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly47"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="same_population :"
+                    android:textSize="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <Spinner
+                    android:id="@+id/spinner471"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/gadaj_font"
+                    android:layout_height="35dp"
+                    android:textSize="19dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:text="level of significance : "
+                    android:textSize="16dp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/los4"
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_height="42dp"
+                    android:textSize="19dp"
+                    android:hint="5      "
+                    android:autoSizeTextType="uniform"
+                    android:layout_weight="99"
+                    android:layout_marginTop="-6dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly49"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/myradius"
+                android:fontFamily="sans-serif"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Test :"
+                    android:textAllCaps="false"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/gadaj_font"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:typeface="monospace" />
+
+                <Spinner
+                    android:id="@+id/spinner47"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="5dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginTop="18dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <Button
+                        android:id="@+id/button5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:background="@drawable/myradius"
+                        android:fontFamily="@font/gadaj_font"
+                        android:onClick="build1"
+                        android:text="predict"
+                        android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        android:typeface="monospace" />
+
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="45dp">
+
+                <LinearLayout
+                    android:id="@+id/scrollLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/myradius"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <TextView
+                        android:id="@+id/pre1"
+                        android:layout_width="match_parent"
+                        android:layout_height="236dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="22dp"
+                        android:layout_marginBottom="15dp"
+                        android:fontFamily="sans-serif"
+                        android:paddingLeft="5dp"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                        android:textColor="#000000"
+                        android:textSize="27dp"
+                        android:typeface="monospace"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:visibility="invisible" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/gif"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:alpha="0.8"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toEndOf="@+id/guideline10"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/guideline11"
+        app:layout_constraintVertical_bias="0.375" />
+
+    <FrameLayout
+        android:id="@+id/re1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:outlineProvider="background"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline14"
+        app:layout_constraintEnd_toEndOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/guideline13">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp" />
+    </FrameLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-7769675880934302/9858239802"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.27" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5622435" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.09" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
